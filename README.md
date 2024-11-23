@@ -154,7 +154,7 @@ ST = BC
 L  = VAN
 O  = WRB
 OU = WRB TECH
-CN = *.xnode.xrocket.network
+CN = *.xnode.host
 
 [ req_ext ]
 subjectAltName = @alt_names
