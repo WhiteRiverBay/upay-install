@@ -4,9 +4,7 @@
 
 java node go php python
 
-### 部分接口可能需要对请求参数做摘要来避免滥用
-
-摘要算法：
+### 部分接口验证摘要算法：
 
 0 生成两个额外的字段：timestamp和nonce，一个是毫秒数，一个是一次性随机字符串
 1 将所有的参数按照字典进行排序
@@ -42,7 +40,7 @@ String base = MapUtil.join(params, "&", "=", true);
 String _sign = DigestUtil.sha256Hex(base + System.getenv("PAYMENT_NOTIFY_SECRET"));
 ```
 
-### 1 创建收款单
+### 1 创建收款单 （需验证）
 
 POST /api/v1/order
 
@@ -141,6 +139,9 @@ curl -X POST $API -H "Content-Type: application/json" -d "$data" | jq .
 ### 3 收款成功通知
 
 upay会将交易结果数据通过post提交到订单预设的notify url。如果首次通知失败的话，会持续通知24个小时，直到业务系统的接口返回success字符串。
+
+**请对回调的数据的摘要做校验**
+**做去重，避免反复回调产生重复的支付数据**
 
 以下是一个php处理回调通知的示例代码：
 
