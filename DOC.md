@@ -1,10 +1,10 @@
-## API 调用
+## SDK
 
-或者使用sdk (开发中)
+[sdk, preparing...](https://github.com/WhiteRiverBay/upay-sdk)
 
-java node go php python
+## REST API
 
-### 部分接口验证摘要算法：
+### security 接口验证摘要算法：
 
 0 生成两个额外的字段：timestamp和nonce，一个是毫秒数，一个是一次性随机字符串
 1 将所有的参数按照字典进行排序
