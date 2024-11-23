@@ -2,6 +2,8 @@
 
 ## 介绍
 
+<img src="https://github.com/WhiteRiverBay/upay-ui/blob/main/public/logo.png?raw=true" alt="upay" title="upay" width="100px" height="100px" />
+
 upay是一个在线usdt收款系统。系统为每个用户生成单独的收款地址。 然后由用户转账或者扫码完成支付。
 
 ## 主要组件
