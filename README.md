@@ -165,7 +165,7 @@ ST = BC
 L  = VAN
 O  = WRB
 OU = WRB TECH
-CN = *.xnode.xrocket.network
+CN = *.xnode.host
 
 [ req_ext ]
 subjectAltName = @alt_names
@@ -229,6 +229,7 @@ npm run build:prod
 然后部署dist目录即可。
 
 
+<<<<<<< HEAD
 ## 如何使用upay-cli
 
 ### 1 获取管理脚本
@@ -242,3 +243,7 @@ npm run build:prod
 evm(eth, base, bsc, arb one, polygon)：0xE9511e55d2AaC1F62D7e3110f7800845dB2a31F1
 tron：TNnHipM7aZMYYanXhESgRV9NmjndcgvaXu
 
+
+### developed by 
+ 
+ethan@wrb.ltd
