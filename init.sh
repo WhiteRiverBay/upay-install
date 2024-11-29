@@ -73,6 +73,26 @@ echo "Please enter the database password: "
 read DB_PASS
 TEMPLATE=${TEMPLATE//\{db_password\}/$DB_PASS}
 
+# test db connection
+echo "Testing database connection"
+if ! mysql -h $DB_HOST -P $DB_PORT -u $DB_USER -p$DB_PASS -e "SELECT 1"; then
+  echo "Database connection failed, please check your database configuration"
+  exit 1
+fi
+
+echo "Database connection successful"
+
+# create the database if it does not exist
+echo "Creating database if it does not exist"
+SQL="CREATE DATABASE IF NOT EXISTS $DB_NAME"
+mysql -h $DB_HOST -P $DB_PORT -u $DB_USER -p$DB_PASS -e "$SQL"
+
+# import the database schema
+echo "Importing database schema"
+mysql -h $DB_HOST -P $DB_PORT -u $DB_USER -p$DB_PASS $DB_NAME < ./init_mysql.sql
+echo "Database schema imported successfully"
+
+
 # redis_host
 echo "Please enter the redis host: "
 read REDIS_HOST
@@ -95,12 +115,12 @@ TEMPLATE=${TEMPLATE//\{redis_ssl_enabled\}/$REDIS_SSL}
 
 # if redis_ssl_enabled is true, then notify user to make sure the redis certificate is in the .config folder
 if [ "$REDIS_SSL" == "true" ]; then
-  echo "Please make sure the redis certificate is in the .config folder before running the server"
+  echo "Please make sure the redis certificate is in the .config/ folder before running the server"
   echo "ca.crt, client.p12 in PKCS12 format"
 fi
 
 # redis_password
-echo "Please enter the redis password (if no password, keep it empty): "
+echo "Please enter the redis password (if it is no password, keep it empty): "
 read REDIS_PASS
 TEMPLATE=${TEMPLATE//\{redis_password\}/$REDIS_PASS}
 

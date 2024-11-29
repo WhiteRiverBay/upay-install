@@ -4,15 +4,30 @@
 
 <img src="https://github.com/WhiteRiverBay/upay-ui/blob/main/public/logo.png?raw=true" alt="upay" title="upay" width="100px" height="100px" />
 
-upay是一个在线usdt收款系统。系统为每个用户生成单独的收款地址。 然后由用户转账或者扫码完成支付。
+upay是一个自托管的在线usdt收款系统。系统为每个用户生成单独的收款地址。 
+
+用户转账或者扫码完成支付。
+
+upay带资金归集组件，由管理本地手动归集资金。
+
+目前支持ethereum, bsc, base, polygon pos, arb one等evm公链，也支持tron公链。
+
+**docker repository目前需要授权才可访问，测试完备后会公开，敬请等待**
+
+*考虑到tron高昂的转账手续费（网络对转u收取的trx费用，等值大约2～6u，即使使用了能量机制也远高于各类evm 链），不建议使用该系统收取大量分散的小额资金，因为归集损耗较大，而且用户支付的成本也较高* 
 
 ## 主要组件
 
+### upay-ui
+
+upay的前端页面。[click here](https://github.com/WhiteRiverBay/upay-ui)
+
 ### upay-api
 
-是upay的服务端系统，目前支持evm链、tron链的收款。 下个版本将会提供对solana的支持。
+目前支持ethereum, bsc, base, polygon pos, arb one等evm公链，也支持tron公链。
+ 
 upay服务端通过对链上usdt合约监听、交易结果监控和交易信息自动比对来完成入账和订单支付。
-服务端还提供交易信息丢失后的异常处理。 即用户支付系统未收到，通过提交交易哈希即可找回。
+服务端提供交易信息丢失后的异常处理。 即用户支付系统未收到，通过提交交易哈希即可找回。
 
 upay使用了rsa4096和aes-gcm-256来完成充值地址的私钥加密。 加密私钥和数据物理隔离。
 
@@ -36,10 +51,6 @@ upay help
 ```
 
 确认是否安装成功。
-
-### upay-ui
-
-upay的前端页面。
 
 ## 如何安装upay-api
 
@@ -216,3 +227,18 @@ npm run build:prod
 ```
 
 然后部署dist目录即可。
+
+
+## 如何使用upay-cli
+
+### 1 获取管理脚本
+
+### 2 一键归集脚本
+
+### 3 查看归集汇总数据
+
+### 空投合约地址
+
+evm(eth, base, bsc, arb one, polygon)：0xE9511e55d2AaC1F62D7e3110f7800845dB2a31F1
+tron：TNnHipM7aZMYYanXhESgRV9NmjndcgvaXu
+
