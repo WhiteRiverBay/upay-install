@@ -1,0 +1,70 @@
+[
+    {
+        "name": "Ethereum",
+        "chainId": 1,
+        "symbol": "ETH",
+        "chainName": "Ethereum",
+        "decimals": 18,
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "explorerUrl": "https://etherscan.io",
+        "usdtContract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "usdtDecimals": 6,
+        "usdSymbol": "USDT",
+        "depositDescription": "Please transfer USDT to the following address (CA: 0xdac17f...831ec7) and wait for a while."
+    },
+    {
+        "name": "Binance Smart Chain",
+        "chainId": 56,
+        "symbol": "BNB",
+        "chainName": "Binance Smart Chain",
+        "decimals": 18,
+        "rpc": "https://bsc-rpc.publicnode.com",
+        "explorerUrl": "https://www.binance.org",
+        "usdtContract": "0x55d398326f99059ff775485246999027b3197955",
+        "usdtDecimals": 18,
+        "usdSymbol": "USDT",
+        "depositDescription": "Please transfer USDT(CA: 0x55d398...197955) to the following address  and wait for a while."
+    },
+    {
+        "name": "Base",
+        "chainId": 8453,
+        "symbol": "ETH",
+        "chainName": "Base",
+        "decimals": 18,
+        "rpc": "https://base-rpc.publicnode.com",
+        "explorerUrl": "https://basescan.org",
+        "usdtContract": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "usdtDecimals": 6,
+        "usdSymbol": "USDC",
+        "depositDescription": "Please transfer [USDC](CA: 0x833589...A02913)  to the following address and wait for a while."
+    },
+
+    {
+        "name": "Polygon (PoS)",
+        "chainId": 137,
+        "symbol": "POL",
+        "chainName": "Polygon (PoS)",
+        "decimals": 18,
+        "rpc": "https://polygon-bor-rpc.publicnode.com",
+        "explorerUrl": "https://polygonscan.com",
+        "usdtContract": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+        "usdtDecimals": 6,
+        "usdSymbol": "USDT",
+        "depositDescription": "Please transfer USDT(CA: 0xc2132d...b58e8f) to the following address and wait for a while."
+    },
+    {
+        "name": "Arbitrum One",
+        "chainId": 42161,
+        "symbol": "ETH",
+        "chainName": "Arbitrum One",
+        "decimals": 18,
+        "rpc": "https://arbitrum-one-rpc.publicnode.com",
+        "explorerUrl": "https://arbiscan.io",
+        "usdtContract": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+        "usdtDecimals": 6,
+        "usdSymbol": "USDT",
+        "depositDescription": "Please transfer USDT(CA: 0x2aD0b6...fFfFfFfF) to the following address and wait for a while."
+    }
+
+
+]
