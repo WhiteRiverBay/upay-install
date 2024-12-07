@@ -1,5 +1,7 @@
 # upay-release
 
+[English](https://wrb.gitbook.io/upay-doc)
+
 ## 介绍
 
 <img src="https://github.com/WhiteRiverBay/upay-ui/blob/main/public/logo.png?raw=true" alt="upay" title="upay" width="100px" height="100px" />
